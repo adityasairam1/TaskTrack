@@ -1,42 +1,122 @@
-#root {
-  max-width: 1280px;
+/* App.css */
+
+.app {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 24px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header h1 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.stats {
+  opacity: 0.7;
 }
 
-.card {
-  padding: 2em;
+header button {
+  margin-left: auto;
 }
 
-.read-the-docs {
-  color: #888;
+section {
+  margin-top: 24px;
+}
+
+form {
+  display: grid;
+  gap: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #111;
+  color: #eee;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 16px;
+  padding: 12px;
+  background: #2a0000;
+  color: #ffb3b3;
+  white-space: pre-wrap;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.task {
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task-id {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+.task-desc {
+  opacity: 0.85;
+  white-space: pre-wrap;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-meta small {
+  opacity: 0.6;
+}
+
+.task-meta button {
+  margin-left: auto;
 }
